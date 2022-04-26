@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}{{ request.user.username }}{% endblock %}
+
+{% block content %}
+<div class="content">
+  <table>
+    <tr>
+      <th>Username:</th>
+      <td>{{ request.user.username }}</td>
+    </tr>
+    <tr>
+      <th>Name:</th>
+      <td>{{ profile.first_name }}</td>
+    </tr>
+    <tr>
+      <th>Last name:</th>
+      <td>{{ profile.last_name }}</td>
+    </tr>
+    <tr>
+      <th>Date of birth:</th>
+      <td>{{ profile.date_of_birth }}</td>
+    </tr>
+  </table>
+</div>
+{% endblock %}
