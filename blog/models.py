@@ -7,7 +7,7 @@ class Post(models.Model):
         on_delete=models.CASCADE,
         related_name="posts")
     text = models.TextField()
-    
+
     created = models.DateTimeField(auto_now_add=True)
 
 
@@ -15,4 +15,4 @@ class Image(models.Model):
     post = models.ForeignKey(Post,
         on_delete=models.CASCADE,
         related_name="images")
-    image = models.ImageField()
+    image = models.ImageField(upload_to="images/")
